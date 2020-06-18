@@ -1,7 +1,7 @@
 # Introduction 
 A simple MQTT client for publishing APC UPS status changes.
 
-This file is focussed on this repository. If you are looking for instructions on setting-up and using `apcups-mqtt` then head over to the [wiki](https://github.com/JamieTemple/apcups-mqtt/wiki) for more help.
+If you are looking for instructions on setting-up and using `apcups-mqtt` then head over to the [wiki](https://github.com/JamieTemple/apcups-mqtt/wiki) for more help.
 
 # Getting Started
 
