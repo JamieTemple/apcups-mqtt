@@ -212,6 +212,7 @@ Number      Ups_01_Power        "UPS 1 Battery power [%.2f W]"                  
 
 # References
 https://www.cyberciti.biz/faq/debian-ubuntu-centos-rhel-install-apcups/
+
 https://www.cyberciti.biz/faq/debian-ubuntu-centos-rhel-install-apcups/
 
 # Contributing
