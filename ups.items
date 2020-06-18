@@ -1,0 +1,22 @@
+// This is an example .items file - you will need to change the channel configuration to work with your configured .things
+
+String      Ups_01_Firmware     "UPS 1 Firmware version"                                    (gUPS_01)   { channel="mqtt:topic:broker:ups-1:firmware" }
+String      Ups_01_Mode         "UPS 1 Mode"                                                (gUPS_01)   { channel="mqtt:topic:broker:ups-1:mode" }
+String      Ups_01_Status       "UPS 1 Status"                                              (gUPS_01)   { channel="mqtt:topic:broker:ups-1:status" }
+String      Ups_01_Sensitivity  "UPS 1 Sensitivity"                                         (gUPS_01)   { channel="mqtt:topic:broker:ups-1:sensitivity" }
+String      Ups_01_Name         "UPS 1 Name"                                                (gUPS_01)   { channel="mqtt:topic:broker:ups-1:name" }
+String      Ups_01_Driver       "UPS 1 Driver"                                              (gUPS_01)   { channel="mqtt:topic:broker:ups-1:driver" }
+String      Ups_01_Model        "UPS 1 Model"                                               (gUPS_01)   { channel="mqtt:topic:broker:ups-1:model" }
+DateTime    Ups_01_LastSeen     "UPS 1 Last Seen [%1$tT %1$td-%1$tm-%1$tY]"                 (gUPS_01)   { channel="mqtt:topic:broker:ups-1:date" }
+DateTime    Ups_01_StartTime    "UPS 1 Start Time [%1$tT %1$td-%1$tm-%1$tY]"                (gUPS_01)   { channel="mqtt:topic:broker:ups-1:starttime" }
+DateTime    Ups_01_BattDate     "UPS 1 Batteries last replaced [%1$tT %1$td-%1$tm-%1$tY]"   (gUPS_01)   { channel="mqtt:topic:broker:ups-1:batterydate" }
+Number      Ups_01_Charge       "UPS 1 Battery Charge [%.2f %%]"                            (gUPS_01)   { channel="mqtt:topic:broker:ups-1:bcharge" }
+Number      Ups_01_Load         "UPS 1 Battery Load [%.2f %%]"                              (gUPS_01)   { channel="mqtt:topic:broker:ups-1:loadpct" }
+Number      Ups_01_MinCharge    "UPS 1 Battery Minimum Charge before shutdown [%.2f %%]"    (gUPS_01)   { channel="mqtt:topic:broker:ups-1:mbattchg" }
+Number      Ups_01_LineVoltage  "UPS 1 Line voltage [%.2f V]"                               (gUPS_01)   { channel="mqtt:topic:broker:ups-1:linev" }
+Number      Ups_01_TimeLeft     "UPS 1 Available time on batteries"                         (gUPS_01)   { channel="mqtt:topic:broker:ups-1:timeleft" }
+Number      Ups_01_MaxLineV     "UPS 1 Maximum line voltage [%.2f V]"                       (gUPS_01)   { channel="mqtt:topic:broker:ups-1:maxlinev" }
+Number      Ups_01_MinLineV     "UPS 1 Minimum line voltage [%.2f V]"                       (gUPS_01)   { channel="mqtt:topic:broker:ups-1:minlinev" }
+Number      Ups_01_HighTrans    "UPS 1 High line transtion voltage [%.2f V]"                (gUPS_01)   { channel="mqtt:topic:broker:ups-1:hitrans" }
+Number      Ups_01_LowTrans     "UPS 1 Low line transition voltage [%.2f V]"                (gUPS_01)   { channel="mqtt:topic:broker:ups-1:lotrans" }
+Number      Ups_01_Power        "UPS 1 Battery power [%.2f W]"                              (gUPS_01)   { channel="mqtt:topic:broker:ups-1:nompower" }
