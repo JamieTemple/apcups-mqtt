@@ -20,13 +20,13 @@
 version: "3"
 services:
   apcups-mqtt:
-    image: scooby:5000/faraday/apcups-mqtt
+    image: scooby:5000/faraday/apcups-mqtt:latest
     container_name: apcups-mqtt
     devices:
         - /dev/usb/hiddev0
-    environment:
-      - TZ=Europe/London
     volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
       - /var/local/containers-data/apcups-mqtt/apcups-mqtt.ini:/app/apcups-mqtt.ini
       - /var/local/containers-data/apcups-mqtt/apcupsd.conf:/etc/apcupsd/apcupsd.conf
     restart: unless-stopped
