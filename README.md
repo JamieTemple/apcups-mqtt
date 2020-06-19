@@ -43,6 +43,9 @@ pip3 install -r requirements.txt
 python3 apcups-mqtt.py
 ```
 
+See the [wiki](https://github.com/JamieTemple/apcups-mqtt/wiki) for instructions on running as a service, or in a container.
+
+
 # References
 https://www.cyberciti.biz/faq/debian-ubuntu-centos-rhel-install-apcups/
 
