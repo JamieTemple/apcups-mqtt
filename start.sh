@@ -1,8 +1,7 @@
 #!/bin/bash
 
-service apcupsd stop
-service apcupsd start
+service apcupsd restart
 
 apcaccess
 
-python3 apcups-mqtt.py
+#python3 apcups-mqtt.py
