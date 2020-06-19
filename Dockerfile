@@ -11,12 +11,12 @@ RUN chmod +x /start.sh
 WORKDIR /app
 
 RUN apt-get update && \
-    apt-get install -y apcupsd
+    apt-get install -y apcupsd && \
+    apt-get -y upgrade
 
 RUN echo "ISCONFIGURED=yes" > /etc/default/apcupsd
 
-RUN service apcupsd stop
-RUN service apcupsd start
+RUN service apcupsd restart
 
 RUN pip install -r requirements.txt
 
