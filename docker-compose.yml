@@ -1,23 +1,27 @@
-# Note - this will not work unless you modify the image to pull from wherever you
-# built your container.
+# Note - this will not work unless you modify a few things...
 
-# image: set this to...
+# image: set this to wherever you've built your image.
+
+# devices: this should probably be ok, but must be where you've
+#          plugged your UPS into your host.
 
 # volumes: ...
 
-# Configuration: Make sure that you've configured your apcups-mqtt.ini file correctly.
+# Configuration
+#  - Make sure that you've configured your apcups-mqtt.ini file correctly.
+#  - .
 
-# docker-compose up --detach
+# Using:
+#  > docker-compose up --detach
 
 # running: After this runs the first time, it will create an apcupsd.conf file
 #          locally. You will probably need to modify this to work with your UPS.
 
-version: "2.1"
+version: "3"
 services:
   apcups-mqtt:
     image: scooby:5000/faraday/apcups-mqtt
     container_name: apcups-mqtt
-    privileged: true
     devices:
         - /dev/usb/hiddev0
     environment:
