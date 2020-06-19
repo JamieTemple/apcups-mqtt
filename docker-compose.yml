@@ -1,0 +1,13 @@
+# Note - this will not work unless you modify the image to pull from wherever you
+# built your container.
+
+version: "2.1"
+services:
+  letsencrypt:
+    image: scooby:5000/faraday/apcups-mqtt
+    container_name: apcups-mqtt
+    environment:
+      - TZ=Europe/London
+    volumes:
+      - /var/local/containers-data/apcups-mqtt/apcups-mqtt.ini:/app/apcups-mqtt.ini
+    restart: unless-stopped
