@@ -1,13 +1,28 @@
 # Note - this will not work unless you modify the image to pull from wherever you
 # built your container.
 
+# image: set this to...
+
+# volumes: ...
+
+# Configuration: Make sure that you've configured your apcups-mqtt.ini file correctly.
+
+# docker-compose up --detach
+
+# running: After this runs the first time, it will create an apcupsd.conf file
+#          locally. You will probably need to modify this to work with your UPS.
+
 version: "2.1"
 services:
-  letsencrypt:
+  apcups-mqtt:
     image: scooby:5000/faraday/apcups-mqtt
     container_name: apcups-mqtt
+    privileged: true
+    devices:
+        - /dev/usb/hiddev0
     environment:
       - TZ=Europe/London
     volumes:
       - /var/local/containers-data/apcups-mqtt/apcups-mqtt.ini:/app/apcups-mqtt.ini
+      - /var/local/containers-data/apcups-mqtt/apcupsd.conf:/etc/apcupsd/apcupsd.conf
     restart: unless-stopped
