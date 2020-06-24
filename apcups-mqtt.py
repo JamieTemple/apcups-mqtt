@@ -16,7 +16,7 @@ wattsParams   = {'nompower'}
 percentParams = {'bcharge', 'mbattchg', 'loadpct'}
 secondsParams = {'cumonbatt', 'alarmdel', 'tonbatt', 'maxtime'}
 minutesParams = {'mintimel', 'timeleft'}
-datesParams   = {'end apc', 'starttime', 'date'}
+datesParams   = {'end apc', 'starttime', 'date', 'xonbatt', 'xoffbatt'}
 
 
 def on_connect(client, userdata, flags, rc):

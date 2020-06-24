@@ -40,7 +40,7 @@ Thing mqtt:topic:broker:ups-1           "MQTT - Office UPS"    (mqtt:broker:brok
         Type datetime   : xonbatt       "Last transfer to batteries"    [ stateTopic="ups-01/xonbatt" ]
         Type number     : tonbatt       "Current time on batteries"     [ stateTopic="ups-01/tonbatt" ]
         Type number     : cumonbatt     "Cumulative time on batteries"  [ stateTopic="ups-01/cumonbatt" ]
-        Type datetime   : xoffbatt      "Last transfer from batteries"  [ stateTopic="ups-01/xonbatt" ]
+        Type datetime   : xoffbatt      "Last transfer from batteries"  [ stateTopic="ups-01/xoffbatt" ]
         Type string     : selftest      "Last self-test results"        [ stateTopic="ups-01/selftest" ]
         Type number     : stesti        "Time between self tests"       [ stateTopic="ups-01/stesti" ]
         Type string     : statflag      "Status flag"                   [ stateTopic="ups-01/statflag" ]
