@@ -48,7 +48,10 @@ def scan_ups():
         if varname in minutesParams:
             varval = varval.replace('Minutes', '').strip()
         if varname in datesParams:
-            varval = datetime.strptime(varval, '%Y-%m-%d %H:%M:%S %z').strftime('%Y-%m-%dT%H:%M:%S%z')
+            try:
+                varval = datetime.strptime(varval, '%Y-%m-%d %H:%M:%S %z').strftime('%Y-%m-%dT%H:%M:%S%z')
+            except:
+                varval = "0000-01-01T00:00:00+0000"
         # battdate is just a date, so requires slightly different reformatting.
         if varname == 'battdate':
             varval = datetime.strptime(varval, '%Y-%m-%d').strftime('%Y-%m-%dT%H:%M:%S%z')
